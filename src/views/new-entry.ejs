@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include ("partials/header") %>
+        <title>New entry</title>
+    </head>
+    <body>
+        <%- include ("partials/navigation") %>
+            <div class="container p-4">
+            <h4>Add new Player to .json file</h4>
+            <hr>
+                <form method="POST" target="/new-entry" class="card card-body">
+
+                    <div class="form-group col-md-6" hidden>
+                        <label for="id">id</label>
+                        <input type="number" class="form-control" name="id" id="id" value="">  
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="first_name">first name</label>
+                            <input type="text" class="form-control" name="first_name" id="first_name" value="" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="last_name">last name</label>
+                            <input type="text" class="form-control" name="last_name" id="last_name" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="position">position</label>
+                            <input type="text" class="form-control" name="position" id="position" value="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="height_feet">height feet</label>
+                            <input type="text" class="form-control" name="height_feet" id="height_feet" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="height_inches">height inches</label>
+                            <input type="text" class="form-control" name="height_inches" id="height_inches" value="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="team">team</label>
+                            <input type="text" class="form-control" name="team" id="team" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="team_id">team id</label>
+                            <input type="text" class="form-control" name="team_id" id="team_id" value="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="team_abbreviation">team abbreviation</label>
+                            <input type="text" class="form-control" name="team_abbreviation" id="team_abbreviation" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="team_city">team city</label>
+                            <input type="text" class="form-control" name="team_city" id="team_city" value="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="team_conference">team conference</label>
+                            <input type="text" class="form-control" name="team_conference" id="team_id" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="team_division">team division</label>
+                            <input type="text" class="form-control" name="team_division" id="team_division" value="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="team_full_name">team full_name</label>
+                            <input type="text" class="form-control" name="team_full_name" id="team_full_name" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="team_name">team name</label>
+                            <input type="text" class="form-control" name="team_name" id="team_name" value="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="weight_pounds">weight pounds</label>
+                            <input type="text" class="form-control" name="weight_pounds" id="weight_pounds" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="submit" class="btn btn-primary" value="Save">
+                            <a href="/" class="btn btn-danger">Cancel</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+    </body>
+</html>

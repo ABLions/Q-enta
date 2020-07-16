@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include ("partials/header") %>
+        <title>Q-enta</title>
+    </head>
+    <body>
+    <%- include ("partials/navigation") %>
+    <div class="container p-4">
+        <h3>New Players on .json file</h3>
+        <hr>
+        <div class="row">
+            <% Q_enta.forEach( function(Q_entas) { %>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><%= Q_entas.first_name %> <%= Q_entas.last_name %></h3>
+                    </div>
+                    <div class="card-body">
+                        <p>id : <%= Q_entas.id %></p>
+                        <p>height_feet: <%= Q_entas.height_feet %></p>
+                        <p>height_inches: <%= Q_entas.height_inches %></p>
+                        <p>position: <%= Q_entas.position %></p>
+                        <p>team_id: <%= Q_entas.team_id %></p>
+                        <p>team_abbreviation: <%= Q_entas.team_abbreviation %></p>
+                        <p>team_city: <%= Q_entas.team_city %></p>
+                        <p>team_conference: <%= Q_entas.team_conference %></p>
+                        <p>team_division: <%= Q_entas.team_division %></p>
+                        <p>team_full_name: <%= Q_entas.team_full_name %></p>
+                        <p>team_name: <%= Q_entas.team_name %></p>
+                        <p>weight_pounds: <%= Q_entas.weight_pounds %></p>
+                    </div>
+                    <div class="card-footer">
+                        <!-- <a href="/edit/<%= Q_entas.id %>" class="btn btn-primary col-md-3">Edit</a> -->
+                        <a href="/delete/<%= Q_entas.id %>" class="btn btn-danger col-md-3">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include ("partials/header") %>
+        <title>Players</title>
+    </head>
+    <body>
+        <%- include ("partials/navigation") %>
+        <div class="container mt-5">
+        <h4>Players list</h4>
+        <hr>
+        <table id="players" class="table table-striped table-bordered" style="width:80%">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>first_name</th>
+                <th>last_name</th>
+                <th>height_feet</th>
+                <th>height_inches</th>
+                <th>position</th>
+                <th>team id</th>
+                <th>team abbreviation</th>
+                <th>team city</th>
+                <th>team conference</th>
+                <th>team division</th>
+                <th>team full_name</th>
+                <th>team name</th>
+                <th>weight_pounds</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% player.forEach( function(play) { %>   
+            <tr>
+                <td><%= play.id %></td>
+                <td><%= play.first_name %></td>
+                <td><%= play.last_name %></td>
+                <td><%= play.height_feet %></td>
+                <td><%= play.height_inches %></td>
+                <td><%= play.position %></td>
+                <td><%= play.team.id %></td>
+                <td><%= play.team.abbreviation %></td>
+                <td><%= play.team.city %></td>
+                <td><%= play.team.conference %></td>
+                <td><%= play.team.division %></td>
+                <td><%= play.team.full_name %></td>
+                <td><%= play.team.name %></td>
+                <td><%= play.weight_pounds %></td>
+            </tr>
+             <% }) %>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>id</th>
+                <th>first_name</th>
+                <th>last_name</th>
+                <th>height_feet</th>
+                <th>height_inches</th>
+                <th>position</th>
+                <th>team id</th>
+                <th>team abbreviation</th>
+                <th>team city</th>
+                <th>team conference</th>
+                <th>team division</th>
+                <th>team full_name</th>
+                <th>team name</th>
+                <th>weight_pounds</th>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+        <script>
+                $(document).ready(function() {
+                    $('#players').DataTable();
+                } );
+                
+        </script>   
+    </body>
+</html>
